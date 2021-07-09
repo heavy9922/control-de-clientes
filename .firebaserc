@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "control-client-7e880": {
+      "hosting": {
+        "control-clients": [
+          "control-client-7e880"
+        ]
+      }
+    }
+  }
+}
