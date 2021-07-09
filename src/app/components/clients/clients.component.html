@@ -1,1 +1,43 @@
-<p>clients works!</p>
+<!-- botones -->
+<section id="action" class="py-4 mb-4 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <a href="#" class="btn btn-primary btn-block" data-toggle="modal" data-target="#addClientModal">
+          <i class="fas fa-plus"></i> Agragar cliente
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- list clients -->
+
+<section id="clients">
+  <div class="container">
+    <div class="ro">
+      <div class="col-md 9">
+        <div class="card-header">
+          <h4>Listado de clientes</h4>
+        </div>
+        <table class="table  table-dark table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th>#</th>
+              <th>Nombre</th>
+              <th>Saldo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let row of clientXD |async ; let i = index">
+              <td>{{i+1}}</td>
+              <td>{{row.name}} {{row.lastname}}</td>
+              <td>{{row.saldo}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

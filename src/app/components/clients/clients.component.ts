@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationExtras } from '@angular/router';
+import { Client } from 'src/app/model/client.model';
+import { ClientService } from 'src/app/services/client.service';
 
 @Component({
   selector: 'app-clients',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientsComponent implements OnInit {
 
-  constructor() { }
+  clientXD = this.clientService.clients;
 
-  ngOnInit(): void {
-  }
+  navigationExtras: NavigationExtras = {
+    state: {
+      value: null,
+    },
+  };
+
+  constructor(private clientService:ClientService) { }
+
+  ngOnInit(): void {}
 
 }
